@@ -6,7 +6,8 @@ import {
   doMoveFx,
   playAgainFx,
   $uiState,
-  IUIState, IActiveGameState,
+  IUIState,
+  IActiveGameState,
 } from '../../models/game'
 import { useStore } from 'effector-react'
 import { GameOverScreen } from '../../../components/GameOverScreen'
