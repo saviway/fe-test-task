@@ -1,7 +1,7 @@
 import { PLAYER_KIND_PLAYER, PLAYER_KIND_AI, PlayerFigure, PlayerKind } from '../../domain/player'
 import styled from 'styled-components'
 import { useState } from 'react'
-import { Button } from '../button'
+import { Button } from '../Button'
 
 /**
  * Game over screen component props definition

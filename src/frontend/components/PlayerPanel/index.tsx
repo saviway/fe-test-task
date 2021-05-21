@@ -1,6 +1,6 @@
 import { PlayerKind, PLAYER_KIND_AI, PLAYER_KIND_PLAYER, PlayerFigure } from '../../domain/player'
 import styled from 'styled-components'
-import { Button } from '../button'
+import { Button } from '../Button'
 
 /**
  * Describes PlayerPanel props
@@ -16,7 +16,7 @@ export interface IPlayerPanelProps {
   playerFigure?: PlayerFigure
 
   /**
-   * Handler of reset button
+   * Handler of reset Button
    */
   onGameReset?: () => void
 }

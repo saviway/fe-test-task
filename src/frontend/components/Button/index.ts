@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 /**
- * Styled button
+ * Styled Button
  */
 export const Button = styled.button`
   background-color: hsl(122, 39%, 49%);

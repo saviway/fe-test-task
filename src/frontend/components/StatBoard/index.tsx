@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Button } from '../button'
+import { Button } from '../Button'
 
 /**
  * Describes StatBoard props
@@ -65,7 +65,7 @@ export function StatBoard(props: IStatBoardProps): JSX.Element {
         </div>
       </div>
 
-      {/* control block to show reset button */}
+      {/* control block to show reset Button */}
       <div className="section">
         <Button type="button" onClick={onReset}>Reset</Button>
       </div>
