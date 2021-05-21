@@ -9,7 +9,15 @@
   "author": "Flow Health",
   "license": "ISC",
   "devDependencies": {
+    "@commitlint/config-conventional": "^12.1.4",
+    "commitlint": "^12.1.4",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.2",
+    "eslint-plugin-prettier": "^3.4.0",
     "gulp": "^3.9.1",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.0",
     "ps-tree": "^1.1.0",
     "shelljs": "^0.7.8"
   },
