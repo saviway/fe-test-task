@@ -44,6 +44,9 @@ or even
 
 to remove a container after shutdown.
 
+#### Screenshots
+
+You can check out screenshots in `./screenshots` folder if you don't want to run/build project.
 
 ### Notes (conclusion)
 
