@@ -4,7 +4,10 @@
   "main": "index.js",
   "scripts": {
     "start": "npm install && LOGLEVEL=info node .",
-    "dev": "npm install && ./node_modules/.bin/gulp"
+    "dev": "npm install && ./node_modules/.bin/gulp",
+    "lint-staged": "lint-staged",
+    "commitlint": "node ./node_modules/commitlint/cli.js",
+    "prettier": "./node_modules/prettier/bin-prettier.js --write ./src/frontend"
   },
   "author": "Flow Health",
   "license": "ISC",
@@ -34,5 +37,14 @@
     "nocache": "^2.0.0",
     "node-fetch": "^1.7.3",
     "tictactoe-agent": "^2.1.2"
+  },
+  "lint-staged": {
+    "src/**/*": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "scarfSettings": {
+    "enabled": false
   }
 }
