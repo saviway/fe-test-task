@@ -30,6 +30,8 @@ To build frontend use following command:
 
 `npm run build:frontend`
 
+Open browser for http://localhost:3001 (if it was run as npm run dev:frontend) or http://localhost:3000 if frontend was built and run under expressjs server.
+
 #### Run in docker
 ```
 docker build -t fe-test-task .
