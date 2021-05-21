@@ -43,6 +43,7 @@
     "express": "^4.16.2",
     "express-history-api-fallback": "^2.2.1",
     "express-session": "^1.15.6",
+    "fp-ts": "^2.10.5",
     "immer": "^9.0.2",
     "log4js": "^2.3.10",
     "md5": "^2.2.1",
