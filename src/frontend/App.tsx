@@ -1,15 +1,32 @@
 // init stores
 import './integration/models/init'
 import { GameScreen } from './components/GameScreen'
-import { StatBoard } from './components/StatBoard'
 import { GameViewport } from './components/GameViewport'
-import { GameBoard } from './components/GameBoard'
+import { HealthChecker } from './integration/components/HealthChecker'
+import { PlayerPanel } from './components/PlayerPanel'
+import { StatBoard } from './integration/components/StatBoard'
+import { GameBoard } from './integration/components/GameBoard'
+import { PlayerPanel as PlayerPanelHuman } from './integration/components/PlayerPanel'
+import { PLAYER_KIND_AI } from './domain/player'
+import { NoServers } from './components/NoServers'
+
+/*
+  I dedicate this app to a girl I met last night in a bar.
+  I hope sex with this code will be better than with her.
+  Also it seems I no need wine to code this app.
+ */
 
 export function App(): JSX.Element {
   return <GameScreen>
-    <StatBoard playerWinsCount={0} aiWinsCount={0} drawsCount={0} xCount={0} oCount={0} onReset={() => false} />
-    <GameViewport aiPanel={<div>player</div>} humanPanel={<div>AI</div>}>
-      <GameBoard boardData={{}} onPlayerMove={(f) => console.log(f)} />
-    </GameViewport>
+    <HealthChecker>
+      {(isAvailable: boolean) => isAvailable ? (
+        <>
+          <StatBoard />
+          <GameViewport aiPanel={<PlayerPanel playerKind={PLAYER_KIND_AI}/>} humanPanel={<PlayerPanelHuman />}>
+            <GameBoard/>
+          </GameViewport>
+        </>
+      ) : <NoServers>No available servers. Please try again later.</NoServers>}
+    </HealthChecker>
   </GameScreen>
 }
